@@ -17,7 +17,16 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             MealSeeder::class,
-            //CategorySeeder::class,
+            CategorySeeder::class,
+            IngredientSeeder::class,
+            TagSeeder::class,
+            LanguageSeeder::class,
+            TranslationSeeder::class,
+            MealIngredientSeeder::class,
+            MealTagSeeder::class,
+            IngredientTranslationSeeder::class,
+            MealTranslationSeeder::class,
+            TagTranslationSeeder::class,
         ]);
     }
 }

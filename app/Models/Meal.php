@@ -12,5 +12,16 @@ class Meal extends Model
     public function category(){
         return $this->belongsTo(Category::class);
     }
-    public $timestamps = false;
+
+    public function translations() {
+        return $this->hasMany(Translation::class);
+    }
+
+    public function tags() {
+        return $this->hasMany(Tag::class);
+    }
+
+    public function ingredients() {
+        return $this->hasMany(Ingredient::class);
+    }
 }
