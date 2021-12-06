@@ -15,9 +15,9 @@ class MealFactory extends Factory
     public function definition()
     {
         return [
-            'title' => $this->faker->name(),
+            'title' => $this->faker->streetName(),
             'slug' => $this->faker->unique()->word(),
-            'category_id' => $this->faker->randomDigitNotNull(),
+            'category_id' => $this->faker->randomDigit(),
         ];
     }
 }

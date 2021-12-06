@@ -13,6 +13,6 @@ class MealTranslationSeeder extends Seeder
      */
     public function run()
     {
-        //
+        \App\Models\MealTranslation::factory(25)->create();
     }
 }

@@ -5,16 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Ingredient extends Model
+class MealsTranslations extends Model
 {
     use HasFactory;
 
     public function meals() {
         return $this->belongsToMany(Meal::class);
     }
-
-    public function ingredients_translations() {
-        return $this->hasMany(IngredientsTranslations::class);
-    }
-
 }

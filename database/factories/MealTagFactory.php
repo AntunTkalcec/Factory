@@ -14,7 +14,8 @@ class MealTagFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'meal_id' => $this->faker->numberBetween($min = 1, $max = 25),
+            'tag_id' => $this->faker->numberBetween($min = 1, $max = 30),
         ];
     }
 }

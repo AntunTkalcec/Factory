@@ -13,6 +13,6 @@ class IngredientTranslationSeeder extends Seeder
      */
     public function run()
     {
-        //
+        \App\Models\IngredientTranslation::factory(45)->create();
     }
 }

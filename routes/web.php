@@ -19,4 +19,4 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/meals/{meals?}', [App\Http\Controllers\MealsController::class, 'index'])->name('meals');
+Route::get('/meals/{category?}/{tags?}/{lang?}', [App\Http\Controllers\MealsController::class, 'index'])->name('meals');

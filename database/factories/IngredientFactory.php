@@ -14,7 +14,8 @@ class IngredientFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'title' => $this->faker->streetName(),
+            'slug' => $this->faker->unique()->word(),
         ];
     }
 }

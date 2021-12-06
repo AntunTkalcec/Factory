@@ -13,6 +13,6 @@ class TagTranslationSeeder extends Seeder
      */
     public function run()
     {
-        //
+        \App\Models\TagTranslation::factory(30)->create();
     }
 }

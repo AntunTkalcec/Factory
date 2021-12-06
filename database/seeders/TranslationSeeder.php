@@ -13,6 +13,6 @@ class TranslationSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\Translation::factory(54)->create();
+        \App\Models\Translation::factory(109)->create();
     }
 }

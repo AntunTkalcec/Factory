@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class IngredientsTranslations extends Migration
+class CreateIngredientsTranslationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,12 +14,14 @@ class IngredientsTranslations extends Migration
     public function up()
     {
         Schema::create('ingredients_translations', function (Blueprint $table) {
-            $table->integer('translation_id')->unsigned();
+            $table->increments('id');
             $table->integer('ingredient_id')->unsigned();
+            $table->string('locale')->index();
 
-            $table->unique(['translation_id', 'ingredient_id']);
-            $table->foreign('translation_id')->references('id')->on('translations');
-            $table->foreign('ingredient_id')->references('id')->on('ingredients');
+            $table->string('title');
+
+            $table->unique(['ingredient_id', 'locale']);
+            $table->foreign('ingredient_id')->references('id')->on('ingredients')->onDelete('cascade');
         });
     }
 
@@ -30,6 +32,6 @@ class IngredientsTranslations extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('ingredients_translations');
     }
 }

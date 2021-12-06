@@ -13,10 +13,6 @@ class Meal extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function translations() {
-        return $this->hasMany(Translation::class);
-    }
-
     public function tags() {
         return $this->hasMany(Tag::class);
     }
@@ -24,4 +20,8 @@ class Meal extends Model
     public function ingredients() {
         return $this->hasMany(Ingredient::class);
     }
+
+    /*public function meals_translations() {
+        return $this->hasMany(MealsTranslations::class);
+    }*/
 }

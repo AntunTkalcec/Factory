@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class MealTagSeeder extends Seeder
+class MealsTagSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,6 +13,6 @@ class MealTagSeeder extends Seeder
      */
     public function run()
     {
-        //
+        \App\Models\MealTag::factory(30)->create();
     }
 }

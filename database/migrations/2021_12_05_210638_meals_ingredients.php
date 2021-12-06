@@ -22,7 +22,7 @@ class MealsIngredients extends Migration
             $table->foreign('ingredient_id')->references('id')->on('ingredients');
         });
     }
-
+    
     /**
      * Reverse the migrations.
      *

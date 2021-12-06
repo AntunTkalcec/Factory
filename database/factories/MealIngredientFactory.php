@@ -14,7 +14,8 @@ class MealIngredientFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'meal_id' => $this->faker->numberBetween($min = 1, $max = 25),
+            'ingredient_id' => $this->faker->unique()->numberBetween($min = 1, $max = 45),
         ];
     }
 }

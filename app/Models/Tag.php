@@ -15,7 +15,7 @@ class Tag extends Model
         return $this->belongsToMany(Meal::class);
     }
 
-    public function translations() {
-        return $this->hasMany(Translation::class);
-    }
+    /*public function tags_translations() {
+        return $this->hasMany(TagsTranslations::class);
+    } */
 }

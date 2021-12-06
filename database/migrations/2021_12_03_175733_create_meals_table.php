@@ -14,13 +14,13 @@ class CreateMealsTable extends Migration
     public function up()
     {
         Schema::create('meals', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('title');
             $table->text('slug')->unique();
             $table->unsignedBigInteger('category_id')->nullable();
             $table->timestamps();
             
-            $table->index('category_id');
+            //$table->foreign('category_id')->references('id')->on('categories');
         });
     }
 
