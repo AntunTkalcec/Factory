@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="jumbotron text-center">
-    <h1 class="font-weight-bold">{{ __('Jela') }}</h1>
+    <h1 class="font-weight-bold">{{ __('Meals of the world') }}</h1>
 
 </div>
 
@@ -12,7 +12,8 @@
         <div class="col-sm-4">
             <h3 class="pt-5">{{ __('Upiši upit') }}</h3>
             <h3 class="pt-5">{{ __('NPR.') }}</h3>
-            <h3 class="pt-5">{{ __('meals?per_page=5&tags=2&lang=hr&with=ingredients,category,tags&diff_time=1493902343&page=2' )}}</h3>
+            <h3 class="pt-5">{{ __('.../meals/1/10 ili .../meals ili .../meals/6') }}</h3>
+            <h3 class="pt-5"><a href="{{ route('meals', [0, 10]) }}"> {{ __('Ili klikni ovdje za "bez kategorije ali sa tag 10"') }} </a></h3>
         </div>
         
     </div>
